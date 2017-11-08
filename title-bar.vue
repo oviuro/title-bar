@@ -9,6 +9,49 @@
     </div>
 </template>
 
+<style lang="scss">
+$red: #cd5c5c;
+$white: #f5f5f5;
+$grey: #eee;
+
+$title-bar--height: 30px;
+$title-bar--exit-bg: $red;
+$title-bar--exit-color: $white;
+$title-bar--item-bg: $grey;
+
+.title-bar {
+  height: $title-bar--height;
+  -webkit-app-region: drag;
+  &__name {
+    display: inline-block;
+    line-height: $title-bar--height;
+  }
+  &__options {
+    float: right;
+    -webkit-app-region: no-drag;
+  }
+  &__item {
+    display: inline-block;
+    line-height: $title-bar--height;
+    text-align: center;
+    height: $title-bar--height;
+    width: 50px;
+    cursor: pointer;
+    &:hover {
+      background-color: $title-bar--item-bg;
+      transition: background-color 0.3s ease;
+    }
+  }
+  &__item--exit {
+    &:hover {
+      color: $title-bar--exit-color;
+      background-color: $title-bar--exit-bg;
+    }
+  }
+}
+</style>
+
+
 <script>
     const { remote } = require('electron')
     export default {
