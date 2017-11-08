@@ -1,6 +1,9 @@
 # title-bar
 > A title-bar component for electron with Vue.
 
+### Demo
+![Demo](demo.gif)
+
 ### Implementation
 ```js
 import TitleBar from '@/components/title-bar'
